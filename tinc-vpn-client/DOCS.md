@@ -24,6 +24,7 @@ Add-on configuration:
   server_name: server01
   server_public_key: paste-server-public-key-base64
   connect_to: tinc-server-fqdn-or-ip
+  connect_port: 655
   server_subnet: 10.0.0.1/32
   client_name: client01
   public_key: paste-client-public-key-base64
@@ -44,6 +45,10 @@ Convert server public key to base64 format and fill the field.
 ### Option: `connect_to` (required)
 
 Specifies which other tinc daemon to connect to on startup.
+
+### Option: `connect_port` (required)
+
+Specifies port to connect to.
 
 ### Option: `server_subnet` (required)
 

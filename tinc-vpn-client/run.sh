@@ -5,6 +5,7 @@ CONFIG_PATH=/data/options.json
 SERVERNAME=$(bashio::config 'server_name')
 SERVERPUBLICKEY=$(bashio::config 'server_public_key')
 TINCSERVER=$(bashio::config 'connect_to')
+TINCSERVERPORT=$(bashio::config 'connect_port')
 SERVERSUBNET=$(bashio::config 'server_subnet')
 CLIENTNAME=$(bashio::config 'client_name')
 PUBLICKEY=$(bashio::config 'public_key')
@@ -57,6 +58,7 @@ EOF
     cat <<EOF > /etc/tinc/tinc0/hosts/${SERVERNAME}
 Subnet = ${SERVERSUBNET}
 Address = ${TINCSERVER}
+Port = ${TINCSERVERPORT}
 
 
 EOF

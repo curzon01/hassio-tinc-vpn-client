@@ -1,7 +1,7 @@
 name: "Tinc VPN Client"
 description: "Open-source VPN daemon"
-url: https://github.com/mdzidic/hassio-tinc-vpn-client
-version: "0.0.2"
+url: https://github.com/curzon01/hassio-tinc-vpn-client
+version: "0.0.3"
 slug: "tinc"
 init: false
 arch:
@@ -20,6 +20,7 @@ options:
   server_name: server01
   server_public_key: paste-server-public-key-base64
   connect_to: tinc-server-fqdn-or-ip
+  connect_port: 655
   server_subnet: 10.0.0.1/32
   client_name: client01
   public_key: paste-client-public-key-base64
@@ -31,6 +32,7 @@ schema:
   server_name: str
   server_public_key: str
   connect_to: str
+  connect_port: str
   server_subnet: str
   client_name: str
   public_key: str
